@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Pissing Cat Farts (PCF) - The New Meme Coin!</title>
+  <!-- Google Fonts (Example) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500&family=Open+Sans:wght@400;700&display=swap"
+    rel="stylesheet"
+  />
+  <style>
+    :root {
+      --primary-color: #fc71a1;    /* Pinkish color */
+      --secondary-color: #ffda79;  /* Light yellow color */
+      --dark-color: #2c2c54;       /* Dark purple/blue */
+      --light-color: #ffffff;      /* White */
+      --font-heading: 'Baloo 2', cursive;
+      --font-body: 'Open Sans', sans-serif;
+    }
+
+    /* RESET & GLOBAL STYLES */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: var(--font-body);
+      background: #f9f9f9;
+      color: var(--dark-color);
+      line-height: 1.6;
+    }
+    a {
+      text-decoration: none;
+      color: var(--dark-color);
+    }
+    ul {
+      list-style: none;
+    }
+    header, footer {
+      background-color: var(--light-color);
+      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    }
+
+    /* HEADER */
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1rem 2rem;
+      position: sticky;
+      top: 0;
+      z-index: 999;
+    }
+    .logo {
+      font-size: 1.5rem;
+      font-family: var(--font-heading);
+      color: var(--primary-color);
+      font-weight: bold;
+    }
+    nav ul {
+      display: flex;
+      gap: 1rem;
+    }
+    nav ul li {
+      cursor: pointer;
+      transition: color 0.3s;
+    }
+    nav ul li:hover {
+      color: var(--primary-color);
+    }
+
+    /* HERO SECTION */
+    .hero {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 4rem 2rem;
+      background: linear-gradient(135deg, #fce3ec 0%, #ffe8b3 100%);
+    }
+    .hero h1 {
+      font-size: 3rem;
+      font-family: var(--font-heading);
+      margin-bottom: 1rem;
+      color: var(--dark-color);
+    }
+    .hero p {
+      max-width: 600px;
+      margin-bottom: 2rem;
+      color: #555;
+    }
+    .hero img {
+      max-width: 280px;
+      margin-bottom: 2rem;
+      border-radius: 10px;
+    }
+    .cta-button {
+      background: var(--primary-color);
+      color: var(--light-color);
+      padding: 1rem 2rem;
+      border: none;
+      border-radius: 30px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+    .cta-button:hover {
+      background: #ff5692; /* Darker pink */
+    }
+    .cta-button a {
+      color: #ffffff;
+    }
+
+    /* HOW TO BUY */
+    .how-to-buy {
+      background: #fff;
+      padding: 3rem 2rem;
+    }
+    .how-to-buy h2 {
+      font-family: var(--font-heading);
+      font-size: 2rem;
+      margin-bottom: 2rem;
+      text-align: center;
+      color: var(--dark-color);
+    }
+    .buy-steps {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    .step {
+      background: #fdf1f4;
+      border-radius: 10px;
+      padding: 1.5rem;
+      display: flex;
+      gap: 1rem;
+      align-items: center;
+    }
+    .step .number {
+      background: var(--primary-color);
+      color: var(--light-color);
+      font-size: 1.2rem;
+      font-weight: bold;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    /* ROADMAP */
+    .roadmap {
+      background: #f7f7f7;
+      padding: 3rem 2rem;
+      text-align: center;
+    }
+    .roadmap h2 {
+      font-family: var(--font-heading);
+      font-size: 2rem;
+      margin-bottom: 2rem;
+      color: var(--dark-color);
+    }
+    .roadmap-timeline {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 2rem;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+    .roadmap-phase {
+      background: #fff;
+      border-radius: 10px;
+      padding: 2rem;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    }
+    .roadmap-phase h3 {
+      margin-bottom: 1rem;
+      color: var(--primary-color);
+    }
+    .roadmap-phase ul li {
+      margin-bottom: 0.5rem;
+      color: #555;
+    }
+
+    /* FOOTER */
+    footer {
+      text-align: center;
+      padding: 2rem 1rem;
+      margin-top: 3rem;
+    }
+    footer .social-links {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      margin-bottom: 1rem;
+    }
+    footer .social-links a {
+      color: var(--dark-color);
+      font-size: 1.2rem;
+      transition: color 0.3s;
+    }
+    footer .social-links a:hover {
+      color: var(--primary-color);
+    }
+    footer p {
+      font-size: 0.9rem;
+      color: #777;
+    }
+
+    /* MEDIA QUERIES */
+    @media (max-width: 768px) {
+      .roadmap-timeline {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <div class="logo">Pissing Cat Farts</div>
+    <nav>
+      <ul>
+        <!-- Removed 'Tokenomics' link -->
+        <li><a href="#how-to-buy">How to Buy</a></li>
+        <li><a href="#roadmap">Roadmap</a></li>
+        <li><a href="https://dexscreener.com/solana/5343mkekdxvzo1rxoc9g3caf4ds5mfwgnemw9q8wyvae" target="_blank">Chart</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- HERO SECTION -->
+  <section class="hero">
+    <!-- Replace PCF.jpg with the correct path if needed -->
+    <img src="PCF.jpg" alt="Pissing Cat Farts Mascot">
+    <h1>The Most Purrfect Meme Coin!</h1>
+    <p>
+      Introducing Pissing Cat Farts (PCF): a meme coin built for fun, community, and ridiculous vibes. 
+      Because why not?
+    </p>
+    <!-- Updated Buy Now link -->
+    <button class="cta-button">
+      <a href="https://pump.fun/coin/2VKGAf3DztsokLJPFYHHvH5uaoW3d9ExPN5BHHHLpump" target="_blank">
+        Buy $PCF
+      </a>
+    </button>
+  </section>
+
+  <!-- HOW TO BUY SECTION -->
+  <section class="how-to-buy" id="how-to-buy">
+    <h2>How to Buy PCF</h2>
+    <div class="buy-steps">
+      <!-- STEP #1 -->
+      <div class="step">
+        <div class="number">1</div>
+        <div>
+          <h4>Get a Crypto Wallet</h4>
+          <p>
+            Download and set up a wallet (e.g., Phantom, Solflare) if you're new to Solana. 
+            Make sure you have some SOL for transaction fees.
+          </p>
+        </div>
+      </div>
+      
+      <!-- REMOVED THE ORIGINAL STEP #2 -->
+
+      <!-- STEP #2 (formerly STEP #3) -->
+      <div class="step">
+        <div class="number">2</div>
+        <div>
+          <h4>Swap for PCF</h4>
+          <p>
+            Select PCF in your preferred decentralized exchange (or use the 
+            <a href="https://dexscreener.com/solana/5343mkekdxvzo1rxoc9g3caf4ds5mfwgnemw9q8wyvae" target="_blank">
+            DexScreener link
+            </a>) and enter the amount you want. 
+            Confirm the transaction in your wallet, wait for the meow-nutes, and you're good to go!
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ROADMAP SECTION -->
+  <section class="roadmap" id="roadmap">
+    <h2>The PCF Roadmap</h2>
+    <div class="roadmap-timeline">
+      <div class="roadmap-phase">
+        <h3>Phase 1</h3>
+        <ul>
+          <li>Website Launch</li>
+          <li>Initial Meme Flood</li>
+          <li>Community Building</li>
+        </ul>
+      </div>
+      <div class="roadmap-phase">
+        <h3>Phase 2</h3>
+        <ul>
+          <li>Marketing Campaigns</li>
+          <li>Charity Partnerships</li>
+          <li>Exchange Listings</li>
+        </ul>
+      </div>
+      <div class="roadmap-phase">
+        <h3>Phase 3</h3>
+        <ul>
+          <li>DAO Governance</li>
+          <li>PCF Merchandise</li>
+          <li>Global Cat Domination</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="social-links">
+      <!-- Twitter -->
+      <a href="https://x.com/pissingcatfarts" target="_blank">Twitter</a>
+      <!-- Telegram -->
+      <a href="https://t.me/pdctele" target="_blank">Telegram</a>
+    </div>
+    <p>
+      © 2025 Pissing Cat Farts. All rights reserved. This is not financial advice; we just love cat farts!
+    </p>
+  </footer>
+
+</body>
+</html>
+
+
